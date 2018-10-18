@@ -1,5 +1,17 @@
 user:
   password: 1111
-  name: fq
+  name:
+    - ${random.int}
+    - bb
   age: 2
   sd: df
+
+info:
+  head: head
+  body: body
+management:
+  endpoints:
+    web:
+      exposure:
+        #加载所有的端点，默认只加载了info、health
+        include: '*'
